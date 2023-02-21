@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+i {
+	user-select: none;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.my-content {
+	max-width: 1100px;
+	min-height: calc(100vh - 65px - 50px);
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+.page-footer {
+	padding-top: 0;
+}
+.my-form {
+	position: relative;
+}
+.my-form button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.filter-radio {
+	margin-right: 1rem;
+}
+.my-card__wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+}
+.card-content {
+	flex-grow: 1;
+}
+.nav-wrapper {
+	padding: 0 5rem;
+}
+.toggleModal {
+	position: fixed;
+	z-index: 5;
+	background-color: #1976d2;
+	font-size: 4rem !important;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 1px 8px 16px black;
+	right: 1rem;
+	top: 5rem;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.toggleModal:hover {
+	filter: brightness(1.2);
+}
+.modalWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 4;
+}
+.my-modal {
+	width: 50rem;
+	max-width: 95%;
+	min-height: 400px;
+	background-color: #fff;
+	box-shadow: 1px 8px 16px black;
+}
+.my-modal__header,
+.my-modal__footer {
+	width: 100%;
+	height: 55px;
+	background-color: #1976d2;
+	padding: 10px 20px;
+}
+.my-modal__content {
+	width: 100%;
+	margin-top: 0;
+	height: 350px;
+	overflow-y: auto;
+}
+.mrD button {
+	margin-right: 5px;
+}
+.active {
+	color: blue;
+}
+.dictionary {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+}
+.dSearch {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.dSidebar {
+	position: sticky;
+	top: 70px;
 }
